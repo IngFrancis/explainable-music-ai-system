@@ -42,16 +42,15 @@ def main() -> None:
     songs = load_songs("data/songs.csv")
     print(f"Loaded songs: {len(songs)}")
 
-    # --- Profile 1: High-Energy Pop ---
-    run_profile("High-Energy Pop", {
-        "favorite_genre": "pop",
-        "favorite_mood": "happy",
-        "target_energy": 0.90,
-        "likes_acoustic": False,
-        "preferred_tempo_bpm": 130,
-        "preferred_valence": 0.85,
-        "preferred_danceability": 0.88
-    }, songs)
+    # Option 1: Increase mood matching weight
+    # Change from 16 -> 24 pts (mood should differentiate pop vs rock)
+
+    # Option 2: Add strictness to genre matching
+    # Instead of: genre_match = 24 if genres_match else 0
+    # Try: genre_match = 24 if genres_match else 8  (partial credit only)
+
+    # Option 3: Add diversity penalty
+    # Reduce score by 10% for each time a song was recently recommended
 
     # --- Profile 2: Chill Lofi ---
     run_profile("Chill Lofi", {

@@ -381,6 +381,49 @@ nearly tied, making the ordering unreliable.
 
 ---
 
+## Experiments You Tried
+
+### Observation: Gym Hero appears in 4 out of 6 profiles
+
+Gym Hero by Max Pulse ranked in the top 3 for High-Energy Pop, Deep Intense
+Rock, Rare Genre Metal, and Middle-of-the-Road profiles despite being a pop
+song. Investigation showed that its combination of very high energy (0.93)
+and very low acousticness (0.05) earns 35+ points before genre and mood are
+checked. With only 18 songs in the catalog, few other songs compete on both
+dimensions simultaneously.
+
+**Root cause:** Energy and acoustic fit together carry 40 points — the same
+as genre and mood combined. A song that scores perfectly on both numeric
+features can outrank genre and mood mismatches, which may not reflect real
+listening preferences.
+
+**Three fixes Copilot suggested:**
+
+1. Increase mood weight from 16 to 24 pts so mood differentiates profiles
+   more strongly (e.g. pop vs rock users get different results)
+
+2. Add partial genre credit — non-matching genre scores 8 pts instead of 0,
+   reducing the all-or-nothing penalty and increasing variety
+
+3. Add a diversity penalty — reduce score by 10% for songs that appear
+   repeatedly across recommendations, forcing more variety
+
+**What I tried:** Temporarily increased mood weight from 16 to 24 and
+reduced energy from 24 to 16. Gym Hero dropped out of the rock and metal
+profiles since its mood (intense) no longer compensated for the genre
+mismatch as easily. Reverted back to original weights to keep tests stable.
+
+---
+
+## Limitations and Risks
+
+- It only works on a small 18-song catalog
+- It does not understand lyrics or song meaning
+- It may over-favor genre matches over better overall vibe matches
+- It treats all users as having a single fixed taste profile
+
+---
+
 ## Getting Started
 
 ### Setup
@@ -412,25 +455,6 @@ pytest
 ```
 
 You can add more tests in `tests/test_recommender.py`.
-
----
-
-## Experiments You Tried
-
-Use this section to document experiments you ran. For example:
-
-- What happened when you changed the weight on genre from 24 to 10
-- What happened when you added tempo or valence to the score
-- How did your system behave for different types of users
-
----
-
-## Limitations and Risks
-
-- It only works on a small 18-song catalog
-- It does not understand lyrics or song meaning
-- It may over-favor genre matches over better overall vibe matches
-- It treats all users as having a single fixed taste profile
 
 ---
 
