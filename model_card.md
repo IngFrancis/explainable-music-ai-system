@@ -19,6 +19,16 @@ It does not learn from listening history or adapt over time. This is a
 classroom simulation built for educational exploration, not for real
 users or production deployment.
 
+**Non-Intended Use:**
+This system should NOT be used as a production music recommender for
+real listeners. It is not designed to handle large catalogs, real user
+data, or streaming platform integration. It should not be used to make
+decisions about which artists or songs receive promotion, as its small
+catalog and exact-match genre scoring would create unfair advantages for
+genres that happen to have more songs in the dataset. It is also not
+suitable for users who have not explicitly set their preferences, since
+it has no ability to learn from behavior or infer taste automatically.
+
 ---
 
 ## 3. How the Model Works
