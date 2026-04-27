@@ -1,0 +1,11 @@
+2026-04-26 23:46:03,098 - INFO - Loaded 18 songs from data/songs.csv
+2026-04-26 23:46:03,099 - INFO - Generating recommendations for user preferences: {'favorite_genre': 'lofi', 'favorite_mood': 'chill', 'target_energy': 0.38, 'likes_acoustic': True, 'preferred_tempo_bpm': 75, 'preferred_valence': 0.58, 'preferred_danceability': 0.6}
+2026-04-26 23:46:03,100 - INFO - Returned 5 recommendations from 18 songs
+2026-04-26 23:46:03,107 - INFO - Generating recommendations for user preferences: {'favorite_genre': 'rock', 'favorite_mood': 'intense', 'target_energy': 0.92, 'likes_acoustic': False, 'preferred_tempo_bpm': 155, 'preferred_valence': 0.45, 'preferred_danceability': 0.65}
+2026-04-26 23:46:03,108 - INFO - Returned 5 recommendations from 18 songs
+2026-04-26 23:46:03,116 - INFO - Generating recommendations for user preferences: {'favorite_genre': 'classical', 'favorite_mood': 'melancholic', 'target_energy': 0.95, 'likes_acoustic': True, 'preferred_valence': 0.1}
+2026-04-26 23:46:03,118 - INFO - Returned 5 recommendations from 18 songs
+2026-04-26 23:46:03,126 - INFO - Generating recommendations for user preferences: {'favorite_genre': 'metal', 'favorite_mood': 'angry', 'target_energy': 0.96, 'likes_acoustic': False, 'preferred_tempo_bpm': 168, 'preferred_valence': 0.31, 'preferred_danceability': 0.61}
+2026-04-26 23:46:03,127 - INFO - Returned 5 recommendations from 18 songs
+2026-04-26 23:46:03,137 - INFO - Generating recommendations for user preferences: {'favorite_genre': 'jazz', 'favorite_mood': 'focused', 'target_energy': 0.5, 'likes_acoustic': True, 'preferred_tempo_bpm': 100, 'preferred_valence': 0.5, 'preferred_danceability': 0.5}
+2026-04-26 23:46:03,137 - INFO - Returned 5 recommendations from 18 songs
