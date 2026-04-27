@@ -1,8 +1,16 @@
-# 🎵 Music Recommender Simulation
+# 🎵 Explainable AI Music Recommendation System
 
 ## Project Summary
 
 This project builds an **Explainable AI Music Recommendation System** in Python. The system represents songs and a user taste profile as structured data, retrieves songs from a CSV catalog, applies a weighted scoring algorithm, ranks songs by how well they match the user's preferences, and returns the top K recommendations with clear explanations.
+
+---
+
+## Original Project (Modules 1–3)
+
+This project is an extension of my earlier **Music Recommender Simulation (Module 3)**. The original system implemented a basic content-based recommendation algorithm that scored songs based on user preferences such as genre, mood, and energy.
+
+In this final version, I expanded the system into a full applied AI pipeline by adding retrieval, explainability, guardrails, logging, and reliability testing to make the system more robust, transparent, and production-ready.
 
 ---
 
