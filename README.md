@@ -37,13 +37,13 @@ The system uses a retrieval-based approach by loading a structured catalog of so
 
 Each retrieved song is evaluated against the user profile using features such as:
 
-- Genre
-- Mood
-- Energy
-- Tempo
-- Valence
-- Danceability
-- Acousticness
+- Genre  
+- Mood  
+- Energy  
+- Tempo  
+- Valence  
+- Danceability  
+- Acousticness  
 
 The retrieved data directly affects the final recommendation output.
 
@@ -51,11 +51,11 @@ The retrieved data directly affects the final recommendation output.
 
 The system includes reliability testing through multiple user profiles and edge cases, including:
 
-- Chill lofi listener
-- Deep intense rock listener
-- Conflicting energy vs mood preferences
-- Rare genre preference
-- Middle-of-the-road profile
+- Chill lofi listener  
+- Deep intense rock listener  
+- Conflicting energy vs mood preferences  
+- Rare genre preference  
+- Middle-of-the-road profile  
 
 These tests help evaluate whether the recommender behaves consistently and reveal limitations in the scoring logic.
 
@@ -67,20 +67,20 @@ These tests help evaluate whether the recommender behaves consistently and revea
 
 The system includes validation to prevent unsafe or incorrect behavior:
 
-- Required user preference fields must be present
-- `target_energy` must be between 0 and 1
-- Optional numeric fields such as valence and danceability must be between 0 and 1
-- The system prevents recommendation generation if the song catalog is empty
-- Missing song data is handled with clear errors
+- Required user preference fields must be present  
+- `target_energy` must be between 0 and 1  
+- Optional numeric fields such as valence and danceability must be between 0 and 1  
+- The system prevents recommendation generation if the song catalog is empty  
+- Missing song data is handled with clear errors  
 
 ### Logging
 
 The system logs important actions, including:
 
-- Loading song data
-- Processing user preferences
-- Generating recommendations
-- Returning top results
+- Loading song data  
+- Processing user preferences  
+- Generating recommendations  
+- Returning top results  
 
 Logs are saved in:
 
